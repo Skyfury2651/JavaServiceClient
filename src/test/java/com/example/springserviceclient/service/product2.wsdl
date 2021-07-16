@@ -4,41 +4,31 @@
 <xsd:import namespace="http://service.springservice.example.com/" schemaLocation="http://localhost:8088/ws/product?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="addProduct">
-<part name="parameters" element="tns:addProduct"/>
+<message name="all">
+<part name="parameters" element="tns:all"/>
 </message>
-<message name="addProductResponse">
-<part name="parameters" element="tns:addProductResponse"/>
+<message name="allResponse">
+<part name="parameters" element="tns:allResponse"/>
 </message>
-<message name="getAllProducts">
-<part name="parameters" element="tns:getAllProducts"/>
+<message name="updateOrUpdate">
+<part name="parameters" element="tns:updateOrUpdate"/>
 </message>
-<message name="getAllProductsResponse">
-<part name="parameters" element="tns:getAllProductsResponse"/>
-</message>
-<message name="sellProduct">
-<part name="parameters" element="tns:sellProduct"/>
-</message>
-<message name="sellProductResponse">
-<part name="parameters" element="tns:sellProductResponse"/>
+<message name="updateOrUpdateResponse">
+<part name="parameters" element="tns:updateOrUpdateResponse"/>
 </message>
 <portType name="ProductService">
-<operation name="addProduct">
-<input wsam:Action="http://service.springservice.example.com/ProductService/addProductRequest" message="tns:addProduct"/>
-<output wsam:Action="http://service.springservice.example.com/ProductService/addProductResponse" message="tns:addProductResponse"/>
+<operation name="all">
+<input wsam:Action="http://service.springservice.example.com/ProductService/allRequest" message="tns:all"/>
+<output wsam:Action="http://service.springservice.example.com/ProductService/allResponse" message="tns:allResponse"/>
 </operation>
-<operation name="getAllProducts">
-<input wsam:Action="http://service.springservice.example.com/ProductService/getAllProductsRequest" message="tns:getAllProducts"/>
-<output wsam:Action="http://service.springservice.example.com/ProductService/getAllProductsResponse" message="tns:getAllProductsResponse"/>
-</operation>
-<operation name="sellProduct">
-<input wsam:Action="http://service.springservice.example.com/ProductService/sellProductRequest" message="tns:sellProduct"/>
-<output wsam:Action="http://service.springservice.example.com/ProductService/sellProductResponse" message="tns:sellProductResponse"/>
+<operation name="updateOrUpdate">
+<input wsam:Action="http://service.springservice.example.com/ProductService/updateOrUpdateRequest" message="tns:updateOrUpdate"/>
+<output wsam:Action="http://service.springservice.example.com/ProductService/updateOrUpdateResponse" message="tns:updateOrUpdateResponse"/>
 </operation>
 </portType>
 <binding name="ProductServicePortBinding" type="tns:ProductService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="addProduct">
+<operation name="all">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -47,16 +37,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getAllProducts">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="sellProduct">
+<operation name="updateOrUpdate">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

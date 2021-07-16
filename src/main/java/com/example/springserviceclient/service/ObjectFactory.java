@@ -24,10 +24,12 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _UpdateOrUpdate_QNAME = new QName("http://service.springservice.example.com/", "updateOrUpdate");
-    private final static QName _AllResponse_QNAME = new QName("http://service.springservice.example.com/", "allResponse");
-    private final static QName _All_QNAME = new QName("http://service.springservice.example.com/", "all");
-    private final static QName _UpdateOrUpdateResponse_QNAME = new QName("http://service.springservice.example.com/", "updateOrUpdateResponse");
+    private final static QName _SellProductResponse_QNAME = new QName("http://service.springservice.example.com/", "sellProductResponse");
+    private final static QName _AddProductResponse_QNAME = new QName("http://service.springservice.example.com/", "addProductResponse");
+    private final static QName _GetAllProductsResponse_QNAME = new QName("http://service.springservice.example.com/", "getAllProductsResponse");
+    private final static QName _GetAllProducts_QNAME = new QName("http://service.springservice.example.com/", "getAllProducts");
+    private final static QName _AddProduct_QNAME = new QName("http://service.springservice.example.com/", "addProduct");
+    private final static QName _SellProduct_QNAME = new QName("http://service.springservice.example.com/", "sellProduct");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.example.springserviceclient.service
@@ -37,35 +39,51 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link All }
+     * Create an instance of {@link GetAllProducts }
      * 
      */
-    public All createAll() {
-        return new All();
+    public GetAllProducts createGetAllProducts() {
+        return new GetAllProducts();
     }
 
     /**
-     * Create an instance of {@link AllResponse }
+     * Create an instance of {@link AddProduct }
      * 
      */
-    public AllResponse createAllResponse() {
-        return new AllResponse();
+    public AddProduct createAddProduct() {
+        return new AddProduct();
     }
 
     /**
-     * Create an instance of {@link UpdateOrUpdateResponse }
+     * Create an instance of {@link SellProduct }
      * 
      */
-    public UpdateOrUpdateResponse createUpdateOrUpdateResponse() {
-        return new UpdateOrUpdateResponse();
+    public SellProduct createSellProduct() {
+        return new SellProduct();
     }
 
     /**
-     * Create an instance of {@link UpdateOrUpdate }
+     * Create an instance of {@link AddProductResponse }
      * 
      */
-    public UpdateOrUpdate createUpdateOrUpdate() {
-        return new UpdateOrUpdate();
+    public AddProductResponse createAddProductResponse() {
+        return new AddProductResponse();
+    }
+
+    /**
+     * Create an instance of {@link SellProductResponse }
+     * 
+     */
+    public SellProductResponse createSellProductResponse() {
+        return new SellProductResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAllProductsResponse }
+     * 
+     */
+    public GetAllProductsResponse createGetAllProductsResponse() {
+        return new GetAllProductsResponse();
     }
 
     /**
@@ -77,39 +95,57 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateOrUpdate }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SellProductResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "updateOrUpdate")
-    public JAXBElement<UpdateOrUpdate> createUpdateOrUpdate(UpdateOrUpdate value) {
-        return new JAXBElement<UpdateOrUpdate>(_UpdateOrUpdate_QNAME, UpdateOrUpdate.class, null, value);
+    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "sellProductResponse")
+    public JAXBElement<SellProductResponse> createSellProductResponse(SellProductResponse value) {
+        return new JAXBElement<SellProductResponse>(_SellProductResponse_QNAME, SellProductResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AllResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddProductResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "allResponse")
-    public JAXBElement<AllResponse> createAllResponse(AllResponse value) {
-        return new JAXBElement<AllResponse>(_AllResponse_QNAME, AllResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "addProductResponse")
+    public JAXBElement<AddProductResponse> createAddProductResponse(AddProductResponse value) {
+        return new JAXBElement<AddProductResponse>(_AddProductResponse_QNAME, AddProductResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link All }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllProductsResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "all")
-    public JAXBElement<All> createAll(All value) {
-        return new JAXBElement<All>(_All_QNAME, All.class, null, value);
+    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "getAllProductsResponse")
+    public JAXBElement<GetAllProductsResponse> createGetAllProductsResponse(GetAllProductsResponse value) {
+        return new JAXBElement<GetAllProductsResponse>(_GetAllProductsResponse_QNAME, GetAllProductsResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateOrUpdateResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllProducts }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "updateOrUpdateResponse")
-    public JAXBElement<UpdateOrUpdateResponse> createUpdateOrUpdateResponse(UpdateOrUpdateResponse value) {
-        return new JAXBElement<UpdateOrUpdateResponse>(_UpdateOrUpdateResponse_QNAME, UpdateOrUpdateResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "getAllProducts")
+    public JAXBElement<GetAllProducts> createGetAllProducts(GetAllProducts value) {
+        return new JAXBElement<GetAllProducts>(_GetAllProducts_QNAME, GetAllProducts.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddProduct }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "addProduct")
+    public JAXBElement<AddProduct> createAddProduct(AddProduct value) {
+        return new JAXBElement<AddProduct>(_AddProduct_QNAME, AddProduct.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link SellProduct }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "sellProduct")
+    public JAXBElement<SellProduct> createSellProduct(SellProduct value) {
+        return new JAXBElement<SellProduct>(_SellProduct_QNAME, SellProduct.class, null, value);
     }
 
 }

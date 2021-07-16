@@ -27,29 +27,47 @@ public interface ProductService {
 
     /**
      * 
-     * @return
-     *     returns java.util.List<com.example.springserviceclient.service.Product>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "all", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.All")
-    @ResponseWrapper(localName = "allResponse", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.AllResponse")
-    @Action(input = "http://service.springservice.example.com/ProductService/allRequest", output = "http://service.springservice.example.com/ProductService/allResponse")
-    public List<Product> all();
-
-    /**
-     * 
      * @param arg0
      * @return
      *     returns com.example.springserviceclient.service.Product
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "updateOrUpdate", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.UpdateOrUpdate")
-    @ResponseWrapper(localName = "updateOrUpdateResponse", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.UpdateOrUpdateResponse")
-    @Action(input = "http://service.springservice.example.com/ProductService/updateOrUpdateRequest", output = "http://service.springservice.example.com/ProductService/updateOrUpdateResponse")
-    public Product updateOrUpdate(
+    @RequestWrapper(localName = "addProduct", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.AddProduct")
+    @ResponseWrapper(localName = "addProductResponse", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.AddProductResponse")
+    @Action(input = "http://service.springservice.example.com/ProductService/addProductRequest", output = "http://service.springservice.example.com/ProductService/addProductResponse")
+    public Product addProduct(
         @WebParam(name = "arg0", targetNamespace = "")
         Product arg0);
+
+    /**
+     * 
+     * @return
+     *     returns java.util.List<com.example.springserviceclient.service.Product>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "getAllProducts", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.GetAllProducts")
+    @ResponseWrapper(localName = "getAllProductsResponse", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.GetAllProductsResponse")
+    @Action(input = "http://service.springservice.example.com/ProductService/getAllProductsRequest", output = "http://service.springservice.example.com/ProductService/getAllProductsResponse")
+    public List<Product> getAllProducts();
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns com.example.springserviceclient.service.Product
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "sellProduct", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.SellProduct")
+    @ResponseWrapper(localName = "sellProductResponse", targetNamespace = "http://service.springservice.example.com/", className = "com.example.springserviceclient.service.SellProductResponse")
+    @Action(input = "http://service.springservice.example.com/ProductService/sellProductRequest", output = "http://service.springservice.example.com/ProductService/sellProductResponse")
+    public Product sellProduct(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        int arg1);
 
 }
