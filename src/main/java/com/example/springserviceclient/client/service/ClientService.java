@@ -1,15 +1,15 @@
 package com.example.springserviceclient.client.service;
 
-import com.example.springserviceclient.service.StudentService;
-import com.example.springserviceclient.service.StudentServiceService;
+import com.example.springserviceclient.service.ProductService;
+import com.example.springserviceclient.service.ProductServiceService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ClientService {
     @Bean
-    public StudentService studentService(){
-        StudentServiceService studentServiceService = new StudentServiceService();
-        return  studentServiceService.getStudentServicePort();
+    public ProductService productService(){
+        ProductServiceService productServiceService = new ProductServiceService();
+        return  productServiceService.getProductServicePort();
     }
 }

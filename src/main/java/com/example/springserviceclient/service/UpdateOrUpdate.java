@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for findById complex type.
+ * <p>Java class for updateOrUpdate complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="findById">
+ * &lt;complexType name="updateOrUpdate">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/>
+ *         &lt;element name="arg0" type="{http://service.springservice.example.com/}product" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -26,26 +26,34 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "findById", propOrder = {
+@XmlType(name = "updateOrUpdate", propOrder = {
     "arg0"
 })
-public class FindById {
+public class UpdateOrUpdate {
 
-    protected int arg0;
+    protected Product arg0;
 
     /**
      * Gets the value of the arg0 property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Product }
+     *     
      */
-    public int getArg0() {
+    public Product getArg0() {
         return arg0;
     }
 
     /**
      * Sets the value of the arg0 property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Product }
+     *     
      */
-    public void setArg0(int value) {
+    public void setArg0(Product value) {
         this.arg0 = value;
     }
 

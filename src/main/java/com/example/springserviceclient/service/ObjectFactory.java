@@ -24,16 +24,10 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _Update_QNAME = new QName("http://service.springservice.example.com/", "update");
-    private final static QName _Save_QNAME = new QName("http://service.springservice.example.com/", "save");
-    private final static QName _Delete_QNAME = new QName("http://service.springservice.example.com/", "delete");
-    private final static QName _SaveResponse_QNAME = new QName("http://service.springservice.example.com/", "saveResponse");
-    private final static QName _UpdateResponse_QNAME = new QName("http://service.springservice.example.com/", "updateResponse");
+    private final static QName _UpdateOrUpdate_QNAME = new QName("http://service.springservice.example.com/", "updateOrUpdate");
     private final static QName _AllResponse_QNAME = new QName("http://service.springservice.example.com/", "allResponse");
     private final static QName _All_QNAME = new QName("http://service.springservice.example.com/", "all");
-    private final static QName _DeleteResponse_QNAME = new QName("http://service.springservice.example.com/", "deleteResponse");
-    private final static QName _FindById_QNAME = new QName("http://service.springservice.example.com/", "findById");
-    private final static QName _FindByIdResponse_QNAME = new QName("http://service.springservice.example.com/", "findByIdResponse");
+    private final static QName _UpdateOrUpdateResponse_QNAME = new QName("http://service.springservice.example.com/", "updateOrUpdateResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.example.springserviceclient.service
@@ -59,120 +53,36 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DeleteResponse }
+     * Create an instance of {@link UpdateOrUpdateResponse }
      * 
      */
-    public DeleteResponse createDeleteResponse() {
-        return new DeleteResponse();
+    public UpdateOrUpdateResponse createUpdateOrUpdateResponse() {
+        return new UpdateOrUpdateResponse();
     }
 
     /**
-     * Create an instance of {@link FindById }
+     * Create an instance of {@link UpdateOrUpdate }
      * 
      */
-    public FindById createFindById() {
-        return new FindById();
+    public UpdateOrUpdate createUpdateOrUpdate() {
+        return new UpdateOrUpdate();
     }
 
     /**
-     * Create an instance of {@link FindByIdResponse }
+     * Create an instance of {@link Product }
      * 
      */
-    public FindByIdResponse createFindByIdResponse() {
-        return new FindByIdResponse();
+    public Product createProduct() {
+        return new Product();
     }
 
     /**
-     * Create an instance of {@link Save }
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateOrUpdate }{@code >}}
      * 
      */
-    public Save createSave() {
-        return new Save();
-    }
-
-    /**
-     * Create an instance of {@link Update }
-     * 
-     */
-    public Update createUpdate() {
-        return new Update();
-    }
-
-    /**
-     * Create an instance of {@link Delete }
-     * 
-     */
-    public Delete createDelete() {
-        return new Delete();
-    }
-
-    /**
-     * Create an instance of {@link SaveResponse }
-     * 
-     */
-    public SaveResponse createSaveResponse() {
-        return new SaveResponse();
-    }
-
-    /**
-     * Create an instance of {@link UpdateResponse }
-     * 
-     */
-    public UpdateResponse createUpdateResponse() {
-        return new UpdateResponse();
-    }
-
-    /**
-     * Create an instance of {@link Student }
-     * 
-     */
-    public Student createStudent() {
-        return new Student();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Update }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "update")
-    public JAXBElement<Update> createUpdate(Update value) {
-        return new JAXBElement<Update>(_Update_QNAME, Update.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Save }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "save")
-    public JAXBElement<Save> createSave(Save value) {
-        return new JAXBElement<Save>(_Save_QNAME, Save.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Delete }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "delete")
-    public JAXBElement<Delete> createDelete(Delete value) {
-        return new JAXBElement<Delete>(_Delete_QNAME, Delete.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link SaveResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "saveResponse")
-    public JAXBElement<SaveResponse> createSaveResponse(SaveResponse value) {
-        return new JAXBElement<SaveResponse>(_SaveResponse_QNAME, SaveResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "updateResponse")
-    public JAXBElement<UpdateResponse> createUpdateResponse(UpdateResponse value) {
-        return new JAXBElement<UpdateResponse>(_UpdateResponse_QNAME, UpdateResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "updateOrUpdate")
+    public JAXBElement<UpdateOrUpdate> createUpdateOrUpdate(UpdateOrUpdate value) {
+        return new JAXBElement<UpdateOrUpdate>(_UpdateOrUpdate_QNAME, UpdateOrUpdate.class, null, value);
     }
 
     /**
@@ -194,30 +104,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateOrUpdateResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "deleteResponse")
-    public JAXBElement<DeleteResponse> createDeleteResponse(DeleteResponse value) {
-        return new JAXBElement<DeleteResponse>(_DeleteResponse_QNAME, DeleteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindById }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "findById")
-    public JAXBElement<FindById> createFindById(FindById value) {
-        return new JAXBElement<FindById>(_FindById_QNAME, FindById.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link FindByIdResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "findByIdResponse")
-    public JAXBElement<FindByIdResponse> createFindByIdResponse(FindByIdResponse value) {
-        return new JAXBElement<FindByIdResponse>(_FindByIdResponse_QNAME, FindByIdResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service.springservice.example.com/", name = "updateOrUpdateResponse")
+    public JAXBElement<UpdateOrUpdateResponse> createUpdateOrUpdateResponse(UpdateOrUpdateResponse value) {
+        return new JAXBElement<UpdateOrUpdateResponse>(_UpdateOrUpdateResponse_QNAME, UpdateOrUpdateResponse.class, null, value);
     }
 
 }

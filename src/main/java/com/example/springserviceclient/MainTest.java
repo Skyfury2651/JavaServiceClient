@@ -5,13 +5,13 @@ import com.example.springserviceclient.service.*;
 
 public class MainTest {
     public static void main(String[] args) {
-        ClientService clientService = new ClientService();
-
-        Student student = new Student();
-        student.setName("hello");
-        student.setAddress("abc");
-        student.setId(1);
-
-        clientService.studentService().save(student);
+//        ClientService clientService = new ClientService();
+//
+//        ProductService student = new Student();
+//        student.setName("hello");
+//        student.setAddress("abc");
+//        student.setId(1);
+//
+//        clientService.productService().save(student);
     }
 }

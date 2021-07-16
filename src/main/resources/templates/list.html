@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List</title>
+</head>
+<body>
+<form th:action="@{/add}"
+      th:object="${product}" method="POST">
+    Name:
+    <input type="text" th:field="*{name}"/>
+    <br/>
+    Quantity:
+    <input type="text" th:field="*{quantity}"/>
+    <br/>
+    Price:
+    <input type="text" th:field="*{price}"/>
+    <br/>
+    <input type="submit" value="Create"/>
+</form>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="product : ${products}">
+        <td th:utext="${product.id}">...</td>
+        <td th:utext="${product.name}">...</td>
+        <td th:utext="${product.quantity}">...</td>
+        <td th:utext="${product.price}">...</td>
+        <td><button>Sell 1</button></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -3,20 +3,21 @@ package com.example.springserviceclient.service;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for update complex type.
+ * <p>Java class for updateOrUpdateResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="update">
+ * &lt;complexType name="updateOrUpdateResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="arg0" type="{http://service.springservice.example.com/}student" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://service.springservice.example.com/}product" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -26,35 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "update", propOrder = {
-    "arg0"
+@XmlType(name = "updateOrUpdateResponse", propOrder = {
+    "_return"
 })
-public class Update {
+public class UpdateOrUpdateResponse {
 
-    protected Student arg0;
+    @XmlElement(name = "return")
+    protected Product _return;
 
     /**
-     * Gets the value of the arg0 property.
+     * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link Student }
+     *     {@link Product }
      *     
      */
-    public Student getArg0() {
-        return arg0;
+    public Product getReturn() {
+        return _return;
     }
 
     /**
-     * Sets the value of the arg0 property.
+     * Sets the value of the return property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Student }
+     *     {@link Product }
      *     
      */
-    public void setArg0(Student value) {
-        this.arg0 = value;
+    public void setReturn(Product value) {
+        this._return = value;
     }
 
 }

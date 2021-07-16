@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for updateResponse complex type.
+ * <p>Java class for updateOrUpdateResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="updateResponse">
+ * &lt;complexType name="updateOrUpdateResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://service.springservice.example.com/}student" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://service.springservice.example.com/}product" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,23 +27,23 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "updateResponse", propOrder = {
+@XmlType(name = "updateOrUpdateResponse", propOrder = {
     "_return"
 })
-public class UpdateResponse {
+public class UpdateOrUpdateResponse {
 
     @XmlElement(name = "return")
-    protected Student _return;
+    protected Product _return;
 
     /**
      * Gets the value of the return property.
      * 
      * @return
      *     possible object is
-     *     {@link Student }
+     *     {@link Product }
      *     
      */
-    public Student getReturn() {
+    public Product getReturn() {
         return _return;
     }
 
@@ -52,10 +52,10 @@ public class UpdateResponse {
      * 
      * @param value
      *     allowed object is
-     *     {@link Student }
+     *     {@link Product }
      *     
      */
-    public void setReturn(Student value) {
+    public void setReturn(Product value) {
         this._return = value;
     }
 

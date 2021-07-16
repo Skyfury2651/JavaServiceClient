@@ -7,18 +7,19 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for student complex type.
+ * <p>Java class for product complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="student">
+ * &lt;complexType name="product">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="address" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="price" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="quantity" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -28,40 +29,18 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "student", propOrder = {
-    "address",
+@XmlType(name = "product", propOrder = {
     "id",
-    "name"
+    "name",
+    "price",
+    "quantity"
 })
-public class Student {
+public class Product {
 
-    protected String address;
     protected int id;
     protected String name;
-
-    /**
-     * Gets the value of the address property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAddress() {
-        return address;
-    }
-
-    /**
-     * Sets the value of the address property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAddress(String value) {
-        this.address = value;
-    }
+    protected double price;
+    protected int quantity;
 
     /**
      * Gets the value of the id property.
@@ -101,6 +80,38 @@ public class Student {
      */
     public void setName(String value) {
         this.name = value;
+    }
+
+    /**
+     * Gets the value of the price property.
+     * 
+     */
+    public double getPrice() {
+        return price;
+    }
+
+    /**
+     * Sets the value of the price property.
+     * 
+     */
+    public void setPrice(double value) {
+        this.price = value;
+    }
+
+    /**
+     * Gets the value of the quantity property.
+     * 
+     */
+    public int getQuantity() {
+        return quantity;
+    }
+
+    /**
+     * Sets the value of the quantity property.
+     * 
+     */
+    public void setQuantity(int value) {
+        this.quantity = value;
     }
 
 }
